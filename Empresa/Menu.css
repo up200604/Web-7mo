@@ -1,0 +1,282 @@
+*{
+	/**:significa "todos los elementos" (un css/Universal_selectors" rel="nofollow" target="_blank">selector universal), de modo que se ajuste a todos los elementos a tener márgenes cero, y cero de relleno, lo que los hace el mismo aspecto en todos los navegadores.*/
+	margin: 0;
+	/* margin:La propiedad margin es una de las "propiedades shorthand" que define CSS y que se utilizan para establecer de forma abreviada el valor de una o más propiedades individuales. La propiedad margin es tan poderosa que permite establecer uno, dos, tres o los cuatro márgenes de forma simultánea.*/
+	padding: 0;
+	/*padding:establece el espacio de relleno requerido por todos los lados de un elemento. El área de padding es el espacio entre el contenido del elemento y su borde ( border ) no se permiten valores negativos */
+	-webkit-box-sizing: border-box;
+	/*webkit:es un motor de diseño diseñado para permitir que los navegadores web muestren páginas web
+	box-sizing: La propiedad nos permite incluir el relleno y el borde en el ancho y alto total de un elemento.
+	border-box: Garantiza que el cuadro de contenido se reduzca para hacer espacio para el relleno y los bordes. Por lo tanto, si establece el ancho de su elemento en 200 píxeles, el cuadro de borde se asegura de que el contenido, el relleno y los bordes encajen en este número*/
+	-moz-box-sizing: border-box;
+	/*moz:es un motor de diseño diseñado para permitir que los navegadores web muestren páginas web*/
+	box-sizing: border-box;
+}
+
+body{
+	/*es el contenedor para todos los aspectos representables de un documento-*/
+	background-image: url(img/fondo.jpg);
+	/*background-image:permite establecer simultáneamente las cinco propiedades relacionadas con el color e imagen de fondo de cada elemento.
+	url: casi siempre se trata de gráficos que se vinculan como fondo a un elemento.*/
+	font-family: 'Century Gothic';
+	/*font-family: define el tipo de fuente*/
+}
+
+a{
+	/*a: es uno de los elementos más importantes del lenguaje HTML, esta etiqueta sirve para convertir texto normal en hipertexto, es decir, sirve para crear enlaces (links).*/
+	text-decoration: none;}
+	/*text-decoration:se usa para establecer el formato de texto a subrayado.*//* Sin decoración */
+}
+
+ul{
+	/* ul:representa una lista no ordenada de ítems que, en contraste con las lista ordenadas (elemento ol ), no produce significados diferentes si el orden de los ítems es alterado.
+		"menu": nombre de la clase */
+	list-style: none;
+	/* El atributo list-style controla la apariencia de los items en listas <ol> y <ul> de HTML. *//* Sin decoración */
+}
+
+img{
+	max-width: 100%;
+	/* img:representa una imagen en el documento
+	   max-width:coloca el máximo ancho a un elemento. Además, impide que el valor de width sea más largo que el valor especificado en max-width */
+}
+
+/*==========================================*/
+
+.title{
+/*.title:; nombre de la clase*/
+	width: 100%;
+	/*width: ancho de un elemento o bloque*/
+	background:;
+	/*background: fondo*/
+	height: 200px;
+	/*height: especifica la altura del area de contenido de un elemento*/
+	display: flex;
+	/*display:es la propiedad más importante para controlar estructuras
+	flex:nos permite maquetar nuestras páginas web de una manera mucho más fácil*/
+	align-items: center;
+	/*aling-items:define el comportamiento predeterminado de cómo se distribuyen los elementos a lo largo del eje transversal 
+	center:centrar*/
+	justify-content: center;
+	/*justify-content:define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor.*/
+}
+
+.title h1{
+	color: #fff;
+	/*color del texto*/
+	font-size: 34px;
+	/*tamaño de fuente*/
+	font-weight: 200;
+	/*font-weight:se puede especificar como parte de la propiedad abreviada de la fuente.*/
+	text-align: center;
+	/*text-aling:se utiliza para alinear el contenido interno de un elemento de bloque..*/
+}
+
+.navegacion{
+	width: 100%;
+	background: #1C1C1C;
+
+	display: flex;
+	justify-content: center;
+}
+
+.menu{
+	width: 1000px;
+	display: flex;
+	flex-wrap: wrap;
+	/*flex-wrap: especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas.
+	wrap:Los elementos flex son colocados en varias líneas. */
+	height: 90px;
+}
+
+.menu li{
+	flex-basis: 0;
+	/*flex-basis:especifíca la base flexible, la cual es el tamaño inicial de un elemento flexible*/
+	flex-grow: 1;
+	/*flex-grow: especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex), en su dirección principal.*/
+	border-right: 1px solid #363636;
+	/*border-right:es un a propiedad rápida para dar valores al border-right-width, border-right-style y border-right-color. Estas propiedades establecen un borde derecho del elemento.
+	solid: Define un borde sólido*/
+	position: relative;
+	/*position:especifica cómo un elemento es posicionado en el documento.
+	relative:El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado con relación a sí mismo*/
+}
+
+.menu .first-item{
+	border-left: 1px solid #363636;
+	/*border-Left:es una propiedad rápida para poner el ancho, estilo y color del borde izquierdo de un elemento.*/
+}
+
+.menu li a{
+	display: flex;
+	flex-direction: column;
+	/*flex-direction:especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).
+	column: El eje principal del contenedor flexible es el mismo que el eje del bloque. Los puntos principales de inicio y final son los mismos que los puntos de antes y después del modo escritura.*/
+	font-size: 18px;
+}
+
+.menu .imagen{
+	position: absolute;
+	/*absolute:El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado relativo a su ancestro posicionado más cercano, si lo hay; de lo contrario, se ubica relativo al bloque contenedor inicial.*/
+	bottom: 0;
+	/*botton:La propiedad afecta la posición vertical de un elemento posicionado. Esta propiedad no tiene efecto en elementos no posicionados.*/
+	right: 30px;
+	/*right:especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código)..*/
+	width: 0%;
+	z-index: 20;
+	/*z-index:indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
+
+	-webkit-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+	/*transition: es una propiedad abreviada de transition-property, transition-duration, transition-timing-function, y transition-delay. Permite definir la transición entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando pseudo-clases como :hover o :active  o aplicado dinámicamente usando JavaScript.
+	  all:  restaura todas las propiedades, excepto unicode-bidi y direction, a su valor inicial o heredado.
+	  cubic-bezier:define una curva Cubic Bezier. Una curva de Cubic Bezier se define por cuatro puntos P0, P1, P2 y P3. P0 y P3 son el inicio y el final de la curva y, en CSS, estos puntos se fijan ya que las coordenadas son proporciones.*/
+   -moz-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+     -o-transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+     /*o:es un motor de diseño diseñado para permitir que los navegadores web muestren páginas web*/ 
+        transition: all 300ms cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+	-webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+   	-moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+    -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+     transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
+    /*box-shadow: La propiedad adjunta una o más sombras a un elemento.
+    rgba: define colores usando el modelo Rojo-verde-azul-alfa (RGBA).*/
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.51);
+}
+
+.menu li a .text-item{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	top: 0%;
+	/*top:especifica parte de la posición de un elemento posicionado. No tiene efecto en elementos no posicionados.*/
+	position: absolute;
+	z-index: 10;
+
+	-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+
+-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
+/*timing-function:suele ser un valor para la propiedad de función de sincronización de transición y la propiedad de función de sincronización de animación. Se utiliza para definir una función que describe cómo se realizará una transición durante su duración, permitiendo que una transición cambie de velocidad durante su curso.*/
+-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+   -moz-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+     -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); 
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+
+.menu li a .down-item{
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	background: #1C1C1C;
+
+	-webkit-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+   -moz-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+     -o-transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+        transition: all 200ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+   -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+     -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); 
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+
+.menu li:hover .down-item, .menu li:hover .text-item{
+	/*li: representa a un ítem en una lista, ya sea ordenada (elemento ol ) o no ordenada (elemento ul ).*/
+	top: 100%;
+	height: 115%;
+}
+
+.menu li:hover .imagen{
+	width: 100%;
+	right: 0px;
+}
+/*-----------------------------------------------------*/
+.portafolio{
+	width: 90%;
+	max-width: 1400px;
+	margin: auto;
+	/*auto:dejamos al navegador que calcule el valor requerido.*/
+}
+
+.portafolio h1{
+	text-align: center;
+	font-size: 38px;
+	margin: 15px 0px 40px;
+}
+
+.portafolio-container{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	/*box-pack:empaquetan o disponen  su contenido en la dirección de su diseño o esquema.*/
+	/*justify:El espacio se divide de igual manera entre los diferentes hijos sin dejar nada del espacio libre ni antes del primer hijo ni después del último. Si sólo hay un hijo el comportamiento es como si fuera start.*/
+	-webkit-justify-content: space-between;
+	/*content: se usa junto con los pseudo-elementos :before y :after para generar contenido que se adjunta antes o después de un selector CSS.
+	  space-between:los artículos se distribuyen uniformemente en la línea; el primer artículo está en la línea de inicio, el último artículo en la línea final*/
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.portafolio-item{
+	width: 30%;
+	position: relative;
+	overflow: hidden;
+	/*overflow: La propiedad especifica qué debería suceder si el contenido desborda el cuadro de un elemento.
+	  hidden:El desbordamiento se recorta y el resto del contenido será invisible.*/
+}
+
+.portafolio-img{
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.portafolio-text{
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+
+	-webkit-transform: translateY(100%);
+	/*translasteY:reposiciona un elemento verticalmente dentro del plano bidimensional.*/
+	-ms-transform: translateY(100%);
+
+	transform: translateY(100%);
+
+	-webkit-transition: all 0.5s ease-out;
+	/*ease-out:especifica un efecto de transición con un final lento*/
+
+	transition: all 0.5s ease-out;
+}
+
+.portafolio-text p{
+	text-align: justify;
+}
+
+.portafolio-item:hover .portafolio-text{
+	-webkit-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+}
+
+.portafolio-item:hover .portafolio-img{
+	-webkit-transform: scale(1.15);
+	/*scale: El método aumenta o disminuye el tamaño de un elemento (de acuerdo con los parámetros dados para el ancho y la altura).*/
+	-ms-transform: scale(1.15);
+	transform: scale(1.15);
+}
