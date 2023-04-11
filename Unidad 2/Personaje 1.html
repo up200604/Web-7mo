@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 10px;
+  background-color: red;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color:  #E5E7E9;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 30px;
+}
+.item1 {
+  grid-row: 1 / 4;
+}
+
+.item8 {
+  grid-area: 1 / 2 / 5 / 6;
+}
+
+.item1 {
+grid-area: myArea;
+}
+
+.grid-container1 {
+  display: grid;
+  grid-template-areas: 'myArea myArea myArea myArea myArea';
+  gap: 10px;
+  background-color: red;
+  padding: 10px;
+}
+
+.grid-container1 > div {
+  background-color:#E5E7E9;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body background="fondo1.jpg">
+
+  <br>
+  <center><img src="banner2.png" alt="Trulli" width="700" height="300"></center>
+
+  <br>
+
+<div class="grid-container1">
+    <div class="item1">MAX</div>
+
+  </div>
+
+<div class="grid-container">
+
+  <div class="item3">Nombre real: <br> Sadie Sink</div>  
+  <div class="item4">Regresar:<a href="ProyectoU1.html"> Inicio <br> </a></div>
+  <div class="item7">Edad: <br> 20 años </div>  
+  <div class="item8"><img src="max2.jpg" width="600" height="600"></div>  
+  <div class="item9">Personaje 2:<a href="Personaje 2.html"> <br> Stephen</a></div>
+  <div class="item10">Estatura:<br>1.6 m</div>  
+  <div class="item11">Personaje 3:<a href="Personaje 3.html"> <br> Dustin</a></div>
+  <div class="item12">Ocupación:<br>Actriz</div> 
+  <div class="item13">Personaje 4<a href="Personaje 4.html"> <br> Eddie</a></div>
+</div>
+
+</body>
+</html>
